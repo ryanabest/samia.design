@@ -1,0 +1,216 @@
+/* Home */
+
+* {box-sizing: border-box;}
+
+body { margin: 0px; padding: 0px; font-size: 0px;}
+
+h1 {font: 20px 'Rakkas';}
+
+h2 {font: bolder 20px "Roboto-Thin";} 
+
+p {font: 16px/1.5 'Roboto';}
+
+h3 {
+  font: 16px 'Rakkas';
+  margin: 0px;
+  padding: 10px 10px 5px 4px;
+}
+
+h4 {
+  font: 13px 'Roboto';
+  margin: 0;
+  padding: 4px 10px 4px 4px;
+}
+
+ 
+.header {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 30px;
+  z-index: -1;
+}
+
+.header-filters {
+  width: 40%;
+  float: left;
+}
+
+.header-filters .filter {
+  width: calc(100%/3.1);
+  display: inline-block;
+}
+
+.header-filters .filter:before {
+  position: relative;
+  top: 3px;
+  margin: 0 5px 0 0;
+  display: inline-block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url('../img/checkbox-blank.svg');
+}
+
+.filter.checked:before {
+  background: url('../img/checkbox-checked.svg');
+}
+
+.info.preview{
+  display: none;
+}
+
+#info-preview {
+  border: none;
+}
+
+.header-logo { width:20%;}
+
+.header img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.header-title {
+  width: 40%;
+  display: inline-block;
+}
+.previews {
+  margin-top: 100px;
+}
+
+.preview {
+  display: inline-block;
+  width: 200px;
+  position: absolute;
+  border: 1px solid #000;
+  background-color: #fff;
+  background: no-repeat;
+  background-position: center center;
+  background-size: cover; 
+  z-index: 1;
+  color:rgba(0, 0, 0, 0);
+}
+#info-preview {
+  width: 50%;
+  height: 400px;
+  background-image: url('../img/info.png');
+  color:rgba(0, 0, 0, 1);
+  font: 13px 'Roboto';
+  padding: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+
+.photo-me img {
+  width: 30%;
+  height: auto;
+  float: left;
+  padding-right: 10px;
+}
+
+.about-me {
+  width: 65%;
+  position: absolute;
+  left: 33%;
+}
+
+
+#aub {background-image: url('../img/aub.jpg'); height: 144px;}
+#acc {background-image: url('../img/acc.jpg'); height: 160px;}
+#blr {background-image: url('../img/blr.svg'); height: 160px;}
+#exhalt {background-image: url('../img/exhalt.svg'); height: 200px;}
+#firefly {background-image: url('../img/firefly.svg'); height: 144px;}
+#graphics {background-image: url('../img/graphics.jpg'); height: 144px;}
+#kooz {background-image: url('../img/kooz.jpg'); height: 200px;}
+#marvelous {background-image: url('../img/marvelous.jpg'); height: 200px;}
+#monkeybars {background-image: url('../img/monkeybars.svg'); height: 144px;}
+#parks {background-image: url('../img/parks.svg'); height: 160px;}
+#pigment {background-image: url('../img/pigment.svg'); height: 248px;}
+#screen {background-image: url('../img/screen.svg'); height: 248px; background-color: #fff;}
+#shedding {background-image: url('../img/shedding.jpg'); height: 160px;}
+
+
+#aub:hover, #acc:hover, #blr:hover, #exhalt:hover, #firefly:hover, #graphics:hover, #pigment:hover, #kooz:hover, #marvelous:hover, #monkeybars:hover, #parks:hover, #screen:hover, #shedding:hover {
+  background-image: none;
+  background-color: #fff;
+  color: black;
+  font: 12px;
+  padding-left: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  }
+/* ASK is there a way to have the static change as you hover */
+
+
+.background {
+	background-image: url('../img/static.jpg');
+  background-size: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+}
+
+.background.show {
+  z-index: 1000;
+  opacity: 1;
+}
+
+.preview.focus {
+  z-index: 1001;
+}
+
+
+/* Template */
+
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1400px;
+}
+
+.c {
+  vertical-align: top;
+  background: #0f0;
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+  align-items: center;
+}
+
+.c1 {width: calc(100% - 20px);}
+.c2 {width: calc(50% - 20px);}
+
+.c1 img, 
+.c2 img { width: 100%; }
+
+#app {
+  display: block;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+  /* ASK how .header-filters move them below logo through padding */
+  .wrapper .previews {max-width: 500px;}
+  .c {
+    background: #ff0;}
+  .c2 {width: calc(100% - 20px);}
+
+  .header-filters {
+    width: 100%;
+    float: left;
+  }
+  .header-filters .filter {
+    width: 100%;
+    display: inline-block;
+}
+}
+
