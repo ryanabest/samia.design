@@ -2,7 +2,11 @@
 
 * {box-sizing: border-box;}
 
-body { margin: 0px; padding: 0px; font-size: 0px;}
+body { 
+  margin: 0px; 
+  padding: 0px; 
+  font-size: 0px;
+}
 
 h1 {font: 20px 'Rakkas';}
 
@@ -22,25 +26,24 @@ h4 {
   padding: 4px 10px 4px 4px;
 }
 
- 
 .header {
   height: 80px;
   width: 100%;
-  display: flex;
-  align-items: center;
+  vertical-align: middle;
   padding: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   z-index: -1;
 }
 
 .header-filters {
   width: 40%;
-  float: left;
+  display: inline-block;
 }
 
 .header-filters .filter {
-  width: calc(100%/3.1);
+  width: calc(100%/3);
   display: inline-block;
+  vertical-align:text-bottom;
 }
 
 .header-filters .filter:before {
@@ -66,7 +69,9 @@ h4 {
   border: none;
 }
 
-.header-logo { width:20%;}
+.header-logo { 
+  width:20%;
+  display: inline-block;}
 
 .header img{
   display: block;
@@ -78,6 +83,7 @@ h4 {
 .header-title {
   width: 40%;
   display: inline-block;
+  vertical-align:text-bottom;
 }
 .previews {
   margin-top: 100px;
@@ -95,6 +101,7 @@ h4 {
   z-index: 1;
   color:rgba(0, 0, 0, 0);
 }
+
 #info-preview {
   width: 50%;
   height: 400px;
@@ -138,6 +145,7 @@ h4 {
 
 #aub:hover, #acc:hover, #blr:hover, #exhalt:hover, #firefly:hover, #graphics:hover, #pigment:hover, #kooz:hover, #marvelous:hover, #monkeybars:hover, #parks:hover, #screen:hover, #shedding:hover {
   background-image: none;
+  cursor: move;
   background-color: #fff;
   color: black;
   font: 12px;
@@ -149,9 +157,10 @@ h4 {
 
 
 .background {
-	background-image: url('../img/static.jpg');
+	/* background-image: url('../img/static.jpg');
   background-size: 100%;
-  position: fixed;
+  position: fixed; */
+  background-color: black;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -199,18 +208,87 @@ h4 {
 
 @media only screen and (max-width: 768px) {
   /* ASK how .header-filters move them below logo through padding */
+  /* ASK how can we make the hover into a toggle */
   .wrapper .previews {max-width: 500px;}
-  .c {
-    background: #ff0;}
-  .c2 {width: calc(100% - 20px);}
+
+  h1 {font: 18px 'Rakkas';}
+
+  h2 {font: bolder 18px "Roboto-Thin";} 
+
+  p {font: 14px/1.5 'Roboto';}
+
+  h3 {
+    font: 12px 'Rakkas';
+    margin: 0px;
+    padding: 10px 10px 5px 4px;
+  }
+  
+  h4 {
+    font: 10px 'Roboto';
+    margin: 0;
+    padding: 4px 10px 4px 4px;
+  }
+
+  .header {
+    height: 100px;
+    padding: 5px;
+    align-items: left;
+  }
 
   .header-filters {
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    float: left;
+    align-items: center; 
   }
+
   .header-filters .filter {
-    width: 100%;
+    width: calc(100%/3);
     display: inline-block;
 }
+  .header-logo { width:100%;}
+
+  .header-title {
+    width: 100%;
+    display: inline-block;
+  }
+ #previews {
+   padding-bottom: 20px;
+ }
+
+  #info-preview {
+    width: 80%;
+    height: 400px;
+    background-image: url('../img/info.png');
+    color:rgba(0, 0, 0, 1);
+    font: 12px 'Roboto';
+    padding: 10px;
+    position: relative;
+    vertical-align: top;
+  }
+
+  .preview {
+    width: calc(200px*0.65);
+    padding-left: 5px;
+  }
+
+  #aub {height: calc(144px*0.65);}
+  #acc {height: calc(160px*0.65);}
+  #blr {height: calc(160px*0.65);}
+  #exhalt {height: calc(200px*0.65);}
+  #firefly {height: calc(144px*0.65);}
+  #graphics {height: calc(144px*0.65);}
+  #kooz {height: calc(200px*0.65);}
+  #marvelous {height: calc(200px*0.65);}
+  #monkeybars {height: calc(144px*0.65);}
+  #parks {height: calc(160px*0.65);}
+  #pigment {height: calc(248px*0.65)}
+  #screen {height: calc(248px*0.65);}
+  #shedding {height: calc(160px*0.65);}
+
+  .c {background: #ff0;}
+  .c2 {width: calc(100% - 20px);}
+
+
 }
 

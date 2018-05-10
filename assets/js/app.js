@@ -8,11 +8,10 @@ $('.preview').hover(function() {
 
 
 $(".preview").each(function() {
-  $(this).css("top", Math.floor(Math.random() * ($(window).height() - $(this).height())) +100);
+  $(this).css("top", Math.floor(Math.random() * ($(window).height() -150 - $(this).height())) +100);
   $(this).css("left", Math.floor(Math.random() * ($(window).width() - $(this).width())));
 });
 
-//ask brendan to make it in the wrapper and not cover my nav//
 
 $('.filter').click(function() {
   $(this).toggleClass('checked');
@@ -26,4 +25,11 @@ $('.filter').click(function() {
   }
 })
 
-//how can the text show
+// $(function() {
+//   $( "#aub ).draggable();
+// });
+
+//make it draggable//
+
+
+
