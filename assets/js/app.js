@@ -36,5 +36,3 @@ $('.filter').click(function() {
 
 
 
-
-

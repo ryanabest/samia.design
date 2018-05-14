@@ -140,14 +140,14 @@ h4 {
 #marvelous {background-image: url('../img/marvelous.jpg'); height: 200px;}
 #monkeybars {background-image: url('../img/monkeybars.svg'); height: 144px;}
 #parks {background-image: url('../img/parks.svg'); height: 160px;}
-#pigment {background-image: url('../img/pigment.svg'); height: 248px;}
+#mark {background-image: url('../img/mark.svg'); height: 248px;}
 #screen {background-image: url('../img/screen.svg'); height: 248px; background-color: #fff;}
 #shedding {background-image: url('../img/shedding.jpg'); height: 160px;}
 
 
-#aub:hover, #acc:hover, #blr:hover, #exhalt:hover, #firefly:hover, #graphics:hover, #pigment:hover, #kooz:hover, #marvelous:hover, #monkeybars:hover, #parks:hover, #screen:hover, #shedding:hover {
+#aub:hover, #acc:hover, #blr:hover, #exhalt:hover, #firefly:hover, #graphics:hover, #mark:hover, #kooz:hover, #marvelous:hover, #monkeybars:hover, #parks:hover, #screen:hover, #shedding:hover {
   background-image: none;
-  cursor: move;
+
   background-color: #fff;
   color: black;
   font: 12px;
@@ -155,7 +155,6 @@ h4 {
   margin-top: 0px;
   margin-bottom: 0px;
   }
-/* ASK is there a way to have the static change as you hover */
 
 
 .background {
@@ -200,10 +199,10 @@ h4 {
 
 .c {
   vertical-align: top;
-  background: #0f0;
   display: inline-block;
   margin: 0 10px 10px 10px;
   align-items: center;
+  padding: 10px;
 }
 
 .c1 {width: calc(100% - 20px);}
@@ -212,12 +211,64 @@ h4 {
 .c1 img, 
 .c2 img { width: 100%; }
 
-#app {
+#letters img {
   display: block;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding-top: 20px;
+}
+#merch img {
+  padding-top: 40px;
+}
+#app video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
-@media only screen and (max-width: 768px) {
+#web {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.footer #mark, #firefly {
+  transform: translateX(-100px);
+}
+
+/* ---- */
+
+.colorbox {
+  font-family: 'Bungee Inline';
+  color: black;
+  font-size: 200px;
+  text-align: center;
+  animation: 5s change infinite;
+
+}
+
+ @keyframes change {  
+     0%  {color: white;}
+    12%  {color: #FEF1DE;}
+    22%  {color: #FEDACA;}
+    33%  {color: #E1AD86;}
+    44%  {color: #AB671E;}
+    55%  {color: #893708;}
+    66%  {color: #6A0100;}
+    77%  {color: #380000;}
+    88%  {color: black;}
+   100%  {color: black;}
+
+}
+.next-steps {
+  padding-left: 30px;
+}
+
+@media only screen and (max-width: 708px) {
   /* ASK how .header-filters move them below logo through padding */
   /* ASK how can we make the hover into a toggle */
   .wrapper .previews {max-width: 500px;}
@@ -295,6 +346,17 @@ h4 {
     padding-left: 5px;
   }
 
+  .surprise {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .surprise img {
+    align-content: center;
+    width: 100%;
+    height: auto;
+  }
+
   #aub {height: calc(144px*0.65);}
   #acc {height: calc(160px*0.65);}
   #blr {height: calc(160px*0.65);}
@@ -305,7 +367,7 @@ h4 {
   #marvelous {height: calc(200px*0.65);}
   #monkeybars {height: calc(144px*0.65);}
   #parks {height: calc(160px*0.65);}
-  #pigment {height: calc(248px*0.65)}
+  #mark {height: calc(248px*0.65)}
   #screen {height: calc(248px*0.65);}
   #shedding {height: calc(160px*0.65);}
 
