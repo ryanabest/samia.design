@@ -14,6 +14,7 @@ $(".preview").each(function() {
 
 
 $('.filter').click(function() {
+  
   $(this).toggleClass('checked');
   let showElement = $(this).attr("class").includes("checked"); //if its checked or not 
   let element = $(this).attr("class").replace("filter ","").replace("checked",""); //which element we are on 
@@ -23,13 +24,17 @@ $('.filter').click(function() {
     $(".preview."+element).css("display","none")
     console.log("hide all "+element)
   }
+
+
+  console.log($('.checked').length);
+  if ($('.checked').length == 0) {
+    $(".surprise").show()
+  } else {
+    $(".surprise").hide()
+  }
 })
 
-// $(function() {
-//   $( "#aub ).draggable();
-// });
 
-//make it draggable//
 
 
 
