@@ -1,6 +1,12 @@
 .header h1 {
   font-family: 'Rakkas',serif;
   font-size: 2vh;
+  cursor: pointer;
+}
+
+.header a {
+  text-decoration: none;
+  color: #000;
 }
 
 .header {
@@ -16,7 +22,6 @@
   width: 40%;
   margin: auto;
   justify-content: space-between;
-  cursor: pointer;
 }
 
 .filter:before {
