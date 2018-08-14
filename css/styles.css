@@ -8,12 +8,12 @@ body {
   font-size: 0px;
 }
 
-/* h1 {font: 20px 'Rakkas';} */
+h1 {font: 20px 'Rakkas';}
 
 h2 {font: bolder 20px "Roboto-Thin";}
 
 p {font-family: 'Roboto',sans-serif;}
-·
+
 .previews h3 {
   font-family: 'Rakkas', serif;
   font-size: 1.6vh;
@@ -32,10 +32,8 @@ p {font-family: 'Roboto',sans-serif;}
 .preview {
   width: 12vw;
   max-width: 300px;
-  color: transparent;
   position: absolute;
   border: 1px solid #000;
-  background-color: #fff;
   background: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -57,7 +55,7 @@ p {font-family: 'Roboto',sans-serif;}
   z-index: 9999;
   display: flex;
   align-items: flex-start;
-  transform: translate(15vw,5vh)
+  transform: translateX(15vw)
 }
 
 #photo-me {
@@ -84,7 +82,7 @@ p {font-family: 'Roboto',sans-serif;}
   font-size: 2vh;
   position: fixed;
   width: 100vw;
-  height: 80vh;
+  height: 70vh;
   text-align: center;
   transition: transform 1s, visibility 0.4s, opacity 0.4s linear;
 }
@@ -92,56 +90,6 @@ p {font-family: 'Roboto',sans-serif;}
 #surprise img {
   width: auto;
   height: 100%;
-}
-/* Template */
-
-.wrapper {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1400px;
-}
-
-.c {
-  vertical-align: top;
-  display: inline-block;
-  margin: 0 10px 10px 10px;
-  align-items: center;
-  padding: 10px;
-}
-
-.c1 {width: calc(100% - 20px);}
-.c2 {width: calc(50% - 20px);}
-
-.c1 img,
-.c2 img { width: 100%; }
-
-#letters img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 80%;
-  padding-top: 20px;
-}
-#merch img {
-  padding-top: 40px;
-}
-#app video {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-#web {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%;
-  padding-top: 30px;
-}
-
-.footer #mark, #firefly {
-  transform: translateX(-100px);
 }
 
 /* ---- */
