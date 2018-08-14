@@ -20,10 +20,21 @@ function load(project) {
 }
 
 function randomPos(project) {
+  function getAbsoluteHeight(el) {
+  // Get the DOM Node if you pass in a string
+  el = (typeof el === 'string') ? document.querySelector(el) : el;
+
+  var styles = window.getComputedStyle(el);
+  var margin = parseFloat(styles['marginTop']) +
+               parseFloat(styles['marginBottom']);
+
+  return Math.ceil(el.offsetHeight + margin);
+}
+
   let projectDiv = document.getElementById(project.project_name);
   let tx = Math.floor(Math.random() * (window.innerWidth - projectDiv.offsetWidth)/window.innerWidth * 100) + "vw";
-  let headerHeight = document.getElementsByClassName("header")[0].offsetHeight;
-  let ty = Math.floor(Math.random() * (window.innerHeight - (3*projectDiv.offsetHeight) - headerHeight)/window.innerHeight*100) + "vh";
+  let headerHeight = getAbsoluteHeight(document.getElementsByClassName("header")[0]);
+  let ty = Math.floor(Math.random() * (window.innerHeight - (3*getAbsoluteHeight(projectDiv)) - headerHeight)/window.innerHeight*100) + "vh";
   projectDiv.style.transform = "translate(" + tx + "," + ty + ")";
 }
 
@@ -46,6 +57,7 @@ function background(project) {
     projectDiv.style.height = Math.floor(project.height/window.innerHeight*100) + "vh"
     projectDiv.style.maxHeight = project.height + "px";
     projectDiv.style.color = "transparent";
+    projectDiv.style.backgroundColor = "#fff";
     projectDiv.style.zIndex = Math.floor(Math.random() * 900);
   }
 
@@ -84,7 +96,6 @@ function projectFilters() {
         previews[p].style.opacity = "1"
       }
     }
-    console.log(document.getElementsByClassName("checked").length)
     if (document.getElementsByClassName("checked").length === 0) {
       document.getElementById("surprise").style.visibility = "visible"
       document.getElementById("surprise").style.opacity = "1"
