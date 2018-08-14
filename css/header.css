@@ -11,9 +11,9 @@
 
 .header {
   height: 13vh;
-  width: 100%;
+  /* width: 100%; */
   vertical-align: middle;
-  padding: 1%;
+  margin: 5vh;
   display: flex;
 }
 
