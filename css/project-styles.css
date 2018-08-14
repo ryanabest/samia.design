@@ -1,0 +1,116 @@
+* {box-sizing: border-box;}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+h1 {font: 20px 'Rakkas';}
+
+h2 {font: bolder 20px "Roboto-Thin";}
+
+p {font-family: 'Roboto',sans-serif;}
+
+.row {
+  width: 95vw;
+  max-width: 1500px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin-bottom: 7vh;
+}
+
+.column {
+  flex:      45%;
+  max-width: 45%;
+}
+
+.c1 {
+  margin-right: 5%;
+  text-align: left;
+}
+
+.c2 {
+  margin-left: 5%;
+  text-align: right;
+}
+
+.row img {
+  width: 100%;
+  height: 100%;
+  vertical-align: top;
+}
+
+#letters-img {
+  background-color: #fff;
+  margin-right: 5%;
+  width: 80%;
+  height: auto;
+}
+
+/* #trees-img {
+  width: 80%;
+  margin-left: 5%;
+  height: auto;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+#playground-bars {
+  width: 40%;
+  height: auto;
+  margin-left: 60%;
+  transform: translateY(-15vh);
+} */
+
+/* Template */
+
+/* .wrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1400px;
+}
+
+.c {
+  vertical-align: top;
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+  align-items: center;
+  padding: 10px;
+}
+
+.c1 {width: calc(100% - 20px);}
+.c2 {width: calc(50% - 20px);}
+
+.c1 img,
+.c2 img { width: 100%; }
+
+#letters img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding-top: 20px;
+}
+#merch img {
+  padding-top: 40px;
+}
+#app video {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#web {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding-top: 30px;
+}
+
+.footer #mark, #firefly {
+  transform: translateX(-100px);
+} */
