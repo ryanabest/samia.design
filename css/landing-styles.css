@@ -1,0 +1,170 @@
+/* Home */
+
+* {box-sizing: border-box;}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px;
+}
+
+p {font-family: 'Roboto',sans-serif;}
+
+
+#info-preview {
+  visibility: hidden;
+  opacity: 0;
+  border: none;
+  position: absolute;
+  width: 70vw;
+  max-width: 70vw;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  transform: translateX(15vw);
+}
+
+#photo-me {
+  width: 40%;
+}
+
+#about-me {
+  width: 60%;
+  padding: 0 2vw 0 2vw;
+  vertical-align: text-top;
+  color: #000;
+  font-size: 1.2vmax;
+}
+
+#photo-me img {
+  width:  100%;
+  height: 100%;
+}
+
+#surprise {
+  visibility: hidden;
+  opacity: 0;
+  color: #000;
+  font-size: 2vh;
+  position: fixed;
+  width: 100vw;
+  height: 70vmin;
+  text-align: center;
+  transition: transform 1s, visibility 0.4s, opacity 0.4s linear;
+}
+
+#surprise img {
+  width: auto;
+  height: 100%;
+}
+
+/* ---- */
+
+.colorbox {
+  font-family: 'Bungee Inline';
+  color: black;
+  font-size: 200px;
+  text-align: center;
+  animation: 5s change infinite;
+
+}
+
+ @keyframes change {
+     0%  {color: white;}
+    12%  {color: #FEF1DE;}
+    22%  {color: #FEDACA;}
+    33%  {color: #E1AD86;}
+    44%  {color: #AB671E;}
+    55%  {color: #893708;}
+    66%  {color: #6A0100;}
+    77%  {color: #380000;}
+    88%  {color: black;}
+   100%  {color: black;}
+
+}
+.next-steps {
+  padding-left: 30px;
+}
+
+@media only screen and (max-width: 708px) {
+  /* ASK how .header-filters move them below logo through padding */
+  /* ASK how can we make the hover into a toggle */
+  .wrapper .previews {max-width: 500px;}
+
+  h1 {font: 18px 'Rakkas';}
+
+  h2 {font: bolder 18px "Roboto-Thin";}
+
+  p {font: 14px/1.5 'Roboto';}
+
+  h3 {
+    font: 12px 'Rakkas';
+    margin: 0px;
+    padding: 10px 10px 5px 4px;
+  }
+
+  h4 {
+    font: 10px 'Roboto';
+    margin: 0;
+    padding: 4px 10px 4px 4px;
+  }
+
+
+ #previews {
+   padding-bottom: 20px;
+ }
+
+  #info-preview {
+    width: 80%;
+    height: auto;
+    background-color: red;
+    font: 12px 'Roboto';
+    padding: 10px;
+    position: relative;
+    vertical-align: top;
+  }
+
+  .photo-me img {
+    width: 30%;
+  }
+  .about-me {
+    width: 70%;
+  }
+  .preview {
+    width: calc(200px*0.65);
+    padding-left: 5px;
+  }
+
+  .surprise {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .surprise img {
+    align-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  #aub {height: calc(144px*0.65);}
+  #acc {height: calc(160px*0.65);}
+  #blr {height: calc(160px*0.65);}
+  #exhalt {height: calc(200px*0.65);}
+  #firefly {height: calc(144px*0.65);}
+  #graphics {height: calc(144px*0.65);}
+  #kooz {height: calc(200px*0.65);}
+  #marvelous {height: calc(200px*0.65);}
+  #monkeybars {height: calc(144px*0.65);}
+  #parks {height: calc(160px*0.65);}
+  #mark {height: calc(248px*0.65)}
+  #screen {height: calc(248px*0.65);}
+  #shedding {height: calc(160px*0.65);}
+
+  .c {background: #ff0;}
+  .c2 {width: calc(100% - 20px);}
+
+
+}

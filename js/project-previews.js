@@ -4,19 +4,11 @@ init()
 function init() {
   for (p=0;p<projects.length;p++) {
     let project = new projectObj(projects[p].project_name,projects[p].project_type,projects[p].preview_type,projects[p].render_height,projects[p].display_name,projects[p].display_descr);
-    load(project);
+    load(project,"previews");
     randomPos(project);
     background(project);
   }
   projectFilters();
-}
-
-function load(project) {
-  let previewsDiv = document.getElementById("previews")
-  let a = document.createElement("a");
-  a.setAttribute("href",project.html_file_path);
-  a.innerHTML = "<div class='preview " + project.class + "' id='" + project.project_name + "'><h3>" + project.display_name + "</h3><h4>" + project.display_descr + "</h4></div>"
-  previewsDiv.appendChild(a);
 }
 
 function randomPos(project) {
@@ -36,47 +28,6 @@ function randomPos(project) {
   let headerHeight = getAbsoluteHeight(document.getElementsByClassName("header")[0]);
   let ty = Math.floor(Math.random() * (window.innerHeight - (3*getAbsoluteHeight(projectDiv)) - headerHeight)/window.innerHeight*100) + "vh";
   projectDiv.style.transform = "translate(" + tx + "," + ty + ")";
-}
-
-function background(project) {
-  let projectDiv = document.getElementById(project.project_name);
-
-  // randomPos();
-  setBackground();
-
-  projectDiv.addEventListener("mouseover",function( event) {
-    clearBackground();
-  })
-
-  projectDiv.addEventListener("mouseout",function( event) {
-    setBackground();
-  })
-
-  function setBackground() {
-    projectDiv.style.backgroundImage = "url("+project.preview_file_path+")";
-    projectDiv.style.height = Math.floor(project.height/window.innerHeight*100) + "vh"
-    projectDiv.style.maxHeight = project.height + "px";
-    projectDiv.style.color = "transparent";
-    projectDiv.style.backgroundColor = "#fff";
-    projectDiv.style.zIndex = Math.floor(Math.random() * 900);
-  }
-
-  function clearBackground() {
-    projectDiv.style.backgroundImage = "none";
-    projectDiv.style.backgroundColor = "#fff";
-    projectDiv.style.color = "black";
-    projectDiv.style.zIndex = "999";
-  }
-}
-
-function projectObj(project_name,project_type,preview_type,render_height,display_name,display_descr) {
-  this.project_name = project_name;
-  this.display_name = display_name;
-  this.display_descr = display_descr;
-  this.html_file_path = "../" + project_type + "/" + project_name;
-  this.class = "preview " + project_type;
-  this.preview_file_path = "../" + project_type + "/" + project_name + "/assets/" + project_name + "." + preview_type;
-  this.height = render_height;
 }
 
 function projectFilters() {
