@@ -18,9 +18,9 @@ function projectObj(project_name,project_type,preview_type,render_height,display
   this.project_name = project_name;
   this.display_name = display_name;
   this.display_descr = display_descr;
-  this.html_file_path = "/" + project_type + "/" + project_name;
+  this.html_file_path = "/samia.design/" + project_type + "/" + project_name;
   this.class = "preview " + project_type;
-  this.preview_file_path = "/" + project_type + "/" + project_name + "/assets/" + project_name + "." + preview_type;
+  this.preview_file_path = "/samia.design/" + project_type + "/" + project_name + "/assets/" + project_name + "." + preview_type;
   this.height = render_height;
 }
 
