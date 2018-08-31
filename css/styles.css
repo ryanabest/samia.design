@@ -5,24 +5,36 @@
   padding: 10px 10px 5px 4px;
 }
 
-.preview h4 {
+.preview h4, a {
   font-family: 'Roboto',sans-serif;
   font-weight: 400;
   font-size: 1.2vh;
   margin: 0;
   padding: 4px 10px 4px 4px;
+  text-decoration: none;
 }
-
 
 .preview {
   width: 200px;
   max-width: 300px;
   position: absolute;
-  border: 1px solid #000;
+  border: 1px solid #696969;
   background: no-repeat;
   background-position: center center;
   background-size: cover;
   padding: 0 .5vw 0 .5vw;
   margin-top: 0;
   transition: transform 1s, visibility 0.2s, opacity 0.2s linear;
+  border-radius: 10px;
+}
+
+.preview .header {
+  margin: 0;
+  height: 15%;
+  width: 100%;
+  cursor: move;
+}
+
+.preview .descr {
+  height: 85%;
 }
