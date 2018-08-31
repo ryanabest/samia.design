@@ -10,6 +10,7 @@
 }
 
 .header {
+  flex-direction: row;
   height: 13vh;
   /* width: 100%; */
   vertical-align: middle;
@@ -18,10 +19,13 @@
 }
 
 .header-filters {
+  order: 1;
   display: flex;
   width: 40%;
   margin: auto;
   justify-content: space-between;
+  flex-direction: row-reverse;
+  padding-right: 5vw;
 }
 
 .filter:before {
@@ -38,8 +42,9 @@
 }
 
 .header-logo {
+  order: 2;
   width:20%;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .header-logo:hover {
@@ -50,51 +55,54 @@
 .header img{
   display: block;
   margin: auto;
-  height: 100%;
-  width: 100%;
+  max-width:100%;
+  max-height:100%;
   min-width: 10vw;
   min-height: 10vh;
 }
 
 .header-title {
+  order: 3;
   width: 40%;
   margin: auto;
   padding-left: 5%;
 }
 
-.header-title h1 {
-  height: 100%;
-}
-
 @media only screen and (max-width: 708px) {
-  /* .header {
-    height: 100px;
-    padding: 5px;
-    align-items: left;
+  .header {
+    flex-direction: column;
+    height: auto;
+    margin: 15px auto;
   }
 
-  .header-filters {
-    position: fixed;
-    bottom: 0;
+  .header h1 {
+    margin: auto;
+  }
+
+  .header-logo, .header-filters, .header-title {
     width: 100%;
-    align-items: center;
+    height: auto;
   }
 
-  .header-filters .filter {
-    width: calc(100%/3);
-    display: inline-block;
-}
   .header-logo {
-    width:100%;}
-
-  .header-logo img {
-    align-items: center;
-    height: 60px;
+    order: 1;
   }
 
   .header-title {
-    width: 100%;
     display: inline-block;
+    order: 2;
+    padding: 0;
     text-align: center;
-  } */
+  }
+
+  .header-filters {
+    order: 3;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .filter {
+    width: 33%;
+  }
 }
