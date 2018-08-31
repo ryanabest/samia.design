@@ -1,3 +1,14 @@
+// let filePath = "/"
+let filePath = "/samia.design/"
+
+let mouseDown = 1;
+document.body.onmousedown = function() {
+  --mouseDown;
+}
+document.body.onmouseup = function() {
+  ++mouseDown;
+}
+
 var projects = [
    {"project_name":"blr","project_type":"digital","preview_type":"svg","render_height":160,"display_name":"BLR","display_descr":"Rebrand for the Bellevue Literary Review uplifting their online presence. 2018."}
   ,{"project_name":"exhalt","project_type":"digital","preview_type":"svg","render_height":200,"display_name":"Building Youth","display_descr":"Online platform for exalt pairing business owners and disenfranchised youth for employment programs. 2017."}
@@ -18,18 +29,22 @@ function projectObj(project_name,project_type,preview_type,render_height,display
   this.project_name = project_name;
   this.display_name = display_name;
   this.display_descr = display_descr;
-  this.html_file_path = "/samia.design/" + project_type + "/" + project_name;
+  this.html_file_path = filePath + project_type + "/" + project_name;
   this.class = "preview " + project_type;
-  this.preview_file_path = "/samia.design/" + project_type + "/" + project_name + "/assets/" + project_name + "." + preview_type;
+  this.preview_file_path = filePath + project_type + "/" + project_name + "/assets/" + project_name + "." + preview_type;
   this.height = render_height;
 }
 
 function load(project,elementID) {
   let previewsDiv = document.getElementById(elementID)
-  let a = document.createElement("a");
-  a.setAttribute("href",project.html_file_path);
-  a.innerHTML = "<div class='preview " + project.class + "' id='" + project.project_name + "'><h3>" + project.display_name + "</h3><h4>" + project.display_descr + "</h4></div>"
-  previewsDiv.appendChild(a);
+  let div = document.createElement("div");
+  // let a = document.createElement("a");
+  // a.setAttribute("href",project.html_file_path);
+  div.innerHTML =
+    "<div class='preview " + project.class + "' id='" + project.project_name + "'>"
+    +"<div class='header'><h3>" + project.display_name + "</h3></div>"+
+    "<a href='" + project.html_file_path + "'><div class='descr'><h4>" + project.display_descr + "</h4></div></a></div>"
+  previewsDiv.appendChild(div);
 }
 
 function background(project) {
@@ -38,12 +53,16 @@ function background(project) {
   // randomPos();
   setBackground();
 
-  projectDiv.addEventListener("mouseover",function( event) {
-    clearBackground();
+  projectDiv.addEventListener("mouseover",function(event) {
+    if (mouseDown) {
+      clearBackground();
+    }
   })
 
-  projectDiv.addEventListener("mouseout",function( event) {
-    setBackground();
+  projectDiv.addEventListener("mouseout",function(event) {
+    if (mouseDown) {
+      setBackground();
+    }
   })
 
   function setBackground() {
@@ -51,6 +70,7 @@ function background(project) {
     projectDiv.style.height = Math.floor(project.height/window.innerHeight*100) + "vh"
     projectDiv.style.maxHeight = project.height + "px";
     projectDiv.style.color = "transparent";
+    projectDiv.getElementsByTagName("a")[0].style.color = "transparent"
     projectDiv.style.backgroundColor = "#fff";
     projectDiv.style.zIndex = Math.floor(Math.random() * 900);
   }
@@ -59,6 +79,7 @@ function background(project) {
     projectDiv.style.backgroundImage = "none";
     projectDiv.style.backgroundColor = "#fff";
     projectDiv.style.color = "black";
+    projectDiv.getElementsByTagName("a")[0].style.color = "black";
     projectDiv.style.zIndex = "999";
   }
 }
