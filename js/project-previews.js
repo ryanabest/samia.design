@@ -45,17 +45,15 @@ function randomPos(project) {
   return Math.ceil(el.offsetHeight + margin);
 }
 
+
   let currentPos = project.getBoundingClientRect().x;
-  let randomPos = Math.random() * (window.innerWidth - project.offsetWidth);
-  // console.log();
-  // console.log(currentPos - randomPos);
-  // console.log(window.innerWidth);
+  let randomWidth = window.innerWidth * 0.95;
+  let randomPos = p/(projects.length-1);
+  randomPos *= randomWidth - project.offsetWidth;
+  randomPos += (window.innerWidth - randomWidth) / 2;
+  // let randomPos = (p/projects.length)window.innerWidth - project.offsetWidth;
   let tx = (randomPos - currentPos)/window.innerWidth*100;
-  console.log(tx);
-  // let tx = Math.floor(Math.random() * (window.innerWidth - 2*project.offsetWidth)/window.innerWidth * 100)/2;
-  // tx *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
   tx += "vw";
-  // console.log(tx);
   let headerHeight = getAbsoluteHeight(document.getElementsByClassName("header")[0]);
   let ty = Math.floor(Math.random() * (window.innerHeight - getAbsoluteHeight(project) - headerHeight)/window.innerHeight*100) + "vh";
   project.style.transform = "translate(" + tx + "," + ty + ")";
