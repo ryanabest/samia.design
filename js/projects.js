@@ -38,12 +38,14 @@ function projectObj(project_name,project_type,preview_type,render_height,display
 function load(project,elementID) {
   let previewsDiv = document.getElementById(elementID)
   let div = document.createElement("div");
-  // let a = document.createElement("a");
-  // a.setAttribute("href",project.html_file_path);
+  div.setAttribute("id",project.project_name + "_parent");
+  div.setAttribute("class","preview_parent");
+
   div.innerHTML =
-    "<div class='preview " + project.class + "' id='" + project.project_name + "'>"
-    +"<div class='header'><h3>" + project.display_name + "</h3></div>"+
-    "<a href='" + project.html_file_path + "'><div class='descr'><h4>" + project.display_descr + "</h4></div></a></div>"
+    "<div class='" + project.class + "' id='" + project.project_name + "'>"+
+    "<a href='" + project.html_file_path + "'>"+
+    "<h3>" + project.display_name + "</h3>"+
+    "<h4>" + project.display_descr + "</h4></a></div>"
   previewsDiv.appendChild(div);
 }
 

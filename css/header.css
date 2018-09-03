@@ -12,10 +12,12 @@
 .header {
   flex-direction: row;
   height: 13vh;
-  /* width: 100%; */
   vertical-align: middle;
   margin: 5vh;
   display: flex;
+  top: 0;
+  background-color: #fff;
+  z-index: 10000;
 }
 
 .header-filters {
@@ -68,11 +70,12 @@
   padding-left: 5%;
 }
 
-@media only screen and (max-width: 708px) {
+@media only screen and (max-width: 700px) {
   .header {
     flex-direction: column;
     height: auto;
     margin: 15px auto;
+    position: sticky;
   }
 
   .header h1 {

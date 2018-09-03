@@ -1,15 +1,36 @@
+var x = window.matchMedia("(max-width: 700px)")
+x.addListener(render);
+let projectsObjs = []
 
 init()
-dragProjects()
+// dragProjects()
 
 function init() {
+  loadProjects(projects);
+  render(x);
+  projectFilters();
+}
+
+function loadProjects(projects) {
   for (p=0;p<projects.length;p++) {
     let project = new projectObj(projects[p].project_name,projects[p].project_type,projects[p].preview_type,projects[p].render_height,projects[p].display_name,projects[p].display_descr);
+    projectsObjs.push(project);
     load(project,"previews");
-    randomPos(project);
     background(project);
   }
-  projectFilters();
+}
+
+function render(x) {
+  let projects = document.getElementById("previews").children;
+  for (p=0;p<projects.length;p++) {
+    let project = projects[p].children[0];
+    if (x.matches) {
+      undoRandomPos(project);
+    } else {
+      randomPos(project);
+    }
+
+  }
 }
 
 function randomPos(project) {
@@ -24,11 +45,26 @@ function randomPos(project) {
   return Math.ceil(el.offsetHeight + margin);
 }
 
-  let projectDiv = document.getElementById(project.project_name);
-  let tx = Math.floor(Math.random() * (window.innerWidth - projectDiv.offsetWidth)/window.innerWidth * 100) + "vw";
+  let currentPos = project.getBoundingClientRect().x;
+  let randomPos = Math.random() * (window.innerWidth - project.offsetWidth);
+  // console.log();
+  // console.log(currentPos - randomPos);
+  // console.log(window.innerWidth);
+  let tx = (randomPos - currentPos)/window.innerWidth*100;
+  console.log(tx);
+  // let tx = Math.floor(Math.random() * (window.innerWidth - 2*project.offsetWidth)/window.innerWidth * 100)/2;
+  // tx *= Math.floor(Math.random()*2) == 1 ? 1 : -1;
+  tx += "vw";
+  // console.log(tx);
   let headerHeight = getAbsoluteHeight(document.getElementsByClassName("header")[0]);
-  let ty = Math.floor(Math.random() * (window.innerHeight - (3*getAbsoluteHeight(projectDiv)) - headerHeight)/window.innerHeight*100) + "vh";
-  projectDiv.style.transform = "translate(" + tx + "," + ty + ")";
+  let ty = Math.floor(Math.random() * (window.innerHeight - getAbsoluteHeight(project) - headerHeight)/window.innerHeight*100) + "vh";
+  project.style.transform = "translate(" + tx + "," + ty + ")";
+  let projectDiv = document.getElementById(project.id);
+}
+
+function undoRandomPos(project) {
+  project.style.transform = "translate(0vw,0vh)";
+  document.getElementById(project.id+"_parent").style.order = Math.floor(Math.random() * 900);
 }
 
 function projectFilters() {
@@ -42,10 +78,16 @@ function projectFilters() {
     for (let p=0;p<previews.length;p++) {
       if (Object.values(filter.srcElement.classList).indexOf("checked") === -1) {
         previews[p].style.visibility = "hidden"
+        setTimeout(function() {previews[p].style.display = "none";},300);
         previews[p].style.opacity = "0"
       } else {
         previews[p].style.visibility = "visible"
         previews[p].style.opacity = "1"
+        if (project_type === "info") {
+          previews[p].style.display = "inline-flex"
+        } else {
+          previews[p].style.display = "inline-block"
+        }
       }
     }
     if (document.getElementsByClassName("checked").length === 0) {
