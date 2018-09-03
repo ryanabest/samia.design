@@ -1,5 +1,5 @@
 var x = window.matchMedia("(max-width: 700px)")
-x.addListener(render);
+x.addListener(random);
 let projectsObjs = []
 
 init()
@@ -7,7 +7,7 @@ init()
 
 function init() {
   loadProjects(projects);
-  render(x);
+  random(x);
   projectFilters();
 }
 
@@ -20,49 +20,56 @@ function loadProjects(projects) {
   }
 }
 
-function render(x) {
+function random(x) {
   let projects = document.getElementById("previews").children;
-  for (p=0;p<projects.length;p++) {
+  let xPosRandomList = [];
+  for (let p=0;p<projects.length;p++) {
+    xPosRandomList.push(p);
+  }
+  for (let p=0;p<projects.length;p++) {
     let project = projects[p].children[0];
     if (x.matches) {
       undoRandomPos(project);
     } else {
-      randomPos(project);
+      randomPos(project,xPosRandomList);
+    }
+  }
+
+  function randomPos(project,xPosRandomList) {
+    function getAbsoluteHeight(el) {
+    // Get the DOM Node if you pass in a string
+    el = (typeof el === 'string') ? document.querySelector(el) : el;
+
+    var styles = window.getComputedStyle(el);
+    var margin = parseFloat(styles['marginTop']) +
+                 parseFloat(styles['marginBottom']);
+
+    return Math.ceil(el.offsetHeight + margin);
     }
 
+    let pIndex = Math.floor(Math.random()*xPosRandomList.length);
+    let p = xPosRandomList[pIndex];
+    xPosRandomList.splice(pIndex,1);
+
+    let currentPos = project.getBoundingClientRect().x;
+    let randomWidth = window.innerWidth * 0.95;
+    let randomPos = p/(projects.length-1);
+    randomPos *= randomWidth - project.offsetWidth;
+    randomPos += (window.innerWidth - randomWidth) / 2;
+    // let randomPos = (p/projects.length)window.innerWidth - project.offsetWidth;
+    let tx = (randomPos - currentPos)/window.innerWidth*100;
+    tx += "vw";
+    let headerHeight = getAbsoluteHeight(document.getElementsByClassName("header")[0]);
+    let ty = Math.floor(Math.random() * (window.innerHeight - getAbsoluteHeight(project) - headerHeight)/window.innerHeight*100) + "vh";
+    project.style.transform = "translate(" + tx + "," + ty + ")";
+    let projectDiv = document.getElementById(project.id);
   }
-}
 
-function randomPos(project) {
-  function getAbsoluteHeight(el) {
-  // Get the DOM Node if you pass in a string
-  el = (typeof el === 'string') ? document.querySelector(el) : el;
+  function undoRandomPos(project) {
+    project.style.transform = "translate(0vw,0vh)";
+    document.getElementById(project.id+"_parent").style.order = Math.floor(Math.random() * 900);
+  }
 
-  var styles = window.getComputedStyle(el);
-  var margin = parseFloat(styles['marginTop']) +
-               parseFloat(styles['marginBottom']);
-
-  return Math.ceil(el.offsetHeight + margin);
-}
-
-
-  let currentPos = project.getBoundingClientRect().x;
-  let randomWidth = window.innerWidth * 0.95;
-  let randomPos = p/(projects.length-1);
-  randomPos *= randomWidth - project.offsetWidth;
-  randomPos += (window.innerWidth - randomWidth) / 2;
-  // let randomPos = (p/projects.length)window.innerWidth - project.offsetWidth;
-  let tx = (randomPos - currentPos)/window.innerWidth*100;
-  tx += "vw";
-  let headerHeight = getAbsoluteHeight(document.getElementsByClassName("header")[0]);
-  let ty = Math.floor(Math.random() * (window.innerHeight - getAbsoluteHeight(project) - headerHeight)/window.innerHeight*100) + "vh";
-  project.style.transform = "translate(" + tx + "," + ty + ")";
-  let projectDiv = document.getElementById(project.id);
-}
-
-function undoRandomPos(project) {
-  project.style.transform = "translate(0vw,0vh)";
-  document.getElementById(project.id+"_parent").style.order = Math.floor(Math.random() * 900);
 }
 
 function projectFilters() {
