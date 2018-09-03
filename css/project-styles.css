@@ -22,17 +22,17 @@ body {
 }
 
 .column {
-  flex:      49%;
-  max-width: 49%;
+  flex:      45%;
+  max-width: 45%;
 }
 
 .c1 {
-  margin-right: 1%;
+  margin-right: 5%;
   text-align: left;
 }
 
 .c2 {
-  margin-left: 1%;
+  margin-left: 5%;
   text-align: right;
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 .column h2, .column p, .footer {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .column h2 {
@@ -55,17 +55,17 @@ body {
 
 .column p {
   font-weight: 400;
-  font-size: 2vmin;
+  font-size: 2vh;
   line-height: 1.5em;
   margin: 2vmin 0px;
 }
 
-#letters-img {
+/* #letters-img {
   background-color: #fff;
   margin-right: 5%;
   width: 80%;
   height: auto;
-}
+} */
 
 #app video, #app img {
   display: block;
@@ -76,7 +76,7 @@ body {
 }
 
 #website video {
-  width:100%;
+  width: 100%;
 }
 
 .footer p {
@@ -93,6 +93,37 @@ body {
 
 .preview {
   left: 50%;
-  transform: translateX(-50%);
   margin-bottom: 7vmin;
+}
+
+@media screen and (max-width: 700px) {
+  .column {
+    flex:      100%;
+    max-width: 100%;
+  }
+
+  .c1, .c2 {
+    margin: auto;
+  }
+
+  .c1, .c2 img {
+    text-align: center;
+  }
+
+  .c1, .c2 p {
+    text-align: left;
+  }
+
+  .c1 {
+    margin-bottom: 7vmin;
+  }
+
+  .column h2 {
+    font-size: 4vw;
+  }
+
+  .column p {
+    font-size: 3.5vw;
+  }
+
 }

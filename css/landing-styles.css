@@ -8,7 +8,7 @@ body {
   font-size: 0px;
 }
 
-p {font-family: 'Roboto',sans-serif;}
+p {font-family: 'Open Sans',sans-serif;}
 
 
 #info-preview {
@@ -24,7 +24,7 @@ p {font-family: 'Roboto',sans-serif;}
   z-index: 9999;
   display: flex;
   align-items: flex-start;
-  transform: translateX(17.5vw);
+  transform: translateX(-32.5vw);
   border: 1px solid #696969;
   flex-direction: row;
 }
@@ -38,7 +38,7 @@ p {font-family: 'Roboto',sans-serif;}
   padding: 0 2vw 0 2vw;
   vertical-align: text-top;
   color: #000;
-  font-size: 1.2vmax;
+  font-size: 1vmax;
 }
 
 #photo-me img {
@@ -63,9 +63,12 @@ p {font-family: 'Roboto',sans-serif;}
   max-height: 100%;
 }
 
-@media screen and (max-width: 708px) {
+@media screen and (max-width: 700px) {
   #info-preview {
     flex-direction: column;
+    max-width: 90vw;
+    width: 90vw;
+    transform: translateX(-45vw);
   }
 
   #photo-me {
@@ -74,5 +77,6 @@ p {font-family: 'Roboto',sans-serif;}
 
   #about-me {
     width: 100%;
+    font-size: 14px;
   }
 }
