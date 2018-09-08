@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="/css/project-styles.css" media="all" rel="stylesheet" />
     <link href="/css/header.css" media="all" rel="stylesheet" />
-    <link href="/css/styles.css" media="all" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Tajawal:400,900&amp;subset=arabic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Tajawal:400,700&amp;subset=arabic" rel="stylesheet">
+    <style>
+    #concept-text {
+      transform: translate(10vw,-10vh);
+    }
+    #app-text {
+      transform: translate(30vw, 15vh);
+    }
+    #monkey-text {
+      transform: translate(5vw,-40vh);
+    }
+    </style>
   </head>
 
 
@@ -26,8 +36,8 @@
       <img id="title-img" src="assets/img/logo.svg"/>
     </div>
 
-    <div class="row" id="subheader">
-      <div class="column c1">
+    <div class="row text-row">
+      <div class="text" id="concept-text">
         <h2>Concept</h2>
         <p>
           With technical advancement comes great ethical responsibility.
@@ -41,7 +51,10 @@
           The conference will allow companies to unwind and enjoy their time learning how to make their company better.
         </p>
       </div>
-      <div class="column c2">
+    </div>
+
+    <div class="row" id="subheader">
+      <div class="column cright">
         <img class="subheader-img" id="letters-img" src="assets/img/letters.svg"/>
       </div>
     </div>
@@ -50,8 +63,8 @@
       <img id="merch-img" src="assets/img/merch.png">
     </div>
 
-    <div class="row" id="app">
-      <div class="column c1">
+    <div class="row text-row">
+      <div class="text" id="app-text">
         <h2>App</h2>
         <p>
           Our app has two main phases.
@@ -59,9 +72,11 @@
           After the conference, they can take what they learned and apply it to their every day life.
           Again, we want them to unplug to play.
          </p>
-         <img id="monkeybars-gif" src="assets/img/monkeybars.gif">
       </div>
-      <div class="column c2" id="app">
+    </div>
+
+    <div class="row" id="app">
+      <div class="column cright" id="app">
         <video autoplay loop>
           <source src="assets/img/after-app.mp4" type="video/mp4">
         </video>
@@ -69,7 +84,7 @@
     </div>
 
     <div class="row" id="em-concept">
-      <div class="column c1">
+      <div class="text" id="monkey-text">
         <h2>Em, The Monkey</h2>
         <p>
           is a monkey from New York.
@@ -90,12 +105,9 @@
       </video>
     </div>
 
-    <div class="footer" id="footer">
-      <p>View Next Digital Project</p>
-    </div>
-
-    <script src="../../js/projects.js"></script>
-    <script src="../../js/next-project.js"></script>
+    <!-- <script src="../../js/projects.js"></script>
+    <script src="../../js/next-project.js"></script> -->
+    <script src="../../js/dragText.js"></script>
 
   </body>
 </html>
