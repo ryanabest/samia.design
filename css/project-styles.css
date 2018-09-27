@@ -91,6 +91,10 @@ body {
 
 
 @media screen and (max-width: 700px) {
+  .row {
+    display: block;
+  }
+
   .column {
     flex:      100%;
     max-width: 100%;
