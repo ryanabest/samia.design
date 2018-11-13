@@ -28,6 +28,7 @@
   justify-content: space-between;
   flex-direction: row-reverse;
   padding-right: 5vw;
+  vertical-align: middle;
 }
 
 .header-filters h1 {
@@ -88,6 +89,14 @@
     margin: auto;
   }
 
+  .header-title h1 {
+    font-size: 25px;
+  }
+
+  .header-filters h1 {
+    font-size: 15px;
+  }
+
   .header-logo, .header-filters, .header-title {
     width: 100%;
     height: auto;
@@ -95,7 +104,7 @@
 
   .header-logo {
     order: 1;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   .header-title {
