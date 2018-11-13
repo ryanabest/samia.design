@@ -20,13 +20,13 @@ function loadProjects(projects) {
 }
 
 function random(x) {
-  let projects = document.getElementById("previews").children;
+  let projects = document.getElementById("previews").getElementsByClassName("preview");
   let xPosRandomList = [];
   for (let p=0;p<projects.length;p++) {
     xPosRandomList.push(p);
   }
   for (let p=0;p<projects.length;p++) {
-    let project = projects[p].children[0];
+    let project = projects[p];
     if (x.matches) {
       undoRandomPos(project);
     } else {

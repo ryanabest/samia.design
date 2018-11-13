@@ -42,10 +42,11 @@ function load(project,elementID) {
   div.setAttribute("class","preview_parent");
 
   div.innerHTML =
-    "<div class='" + project.class + "' id='" + project.project_name + "'>"+
     "<a href='" + project.html_file_path + "'>"+
+    "<div class='" + project.class + "' id='" + project.project_name + "'>"+
+    // "<a href='" + project.html_file_path + "'>"+
     "<h3>" + project.display_name + "</h3>"+
-    "<h4>" + project.display_descr + "</h4></a></div>"
+    "<h4>" + project.display_descr + "</h4></div></a>"
   previewsDiv.appendChild(div);
 }
 
@@ -68,11 +69,11 @@ function background(project) {
   })
 
   function setBackground() {
+    console.log(projectDiv);
     projectDiv.style.backgroundImage = "url("+project.preview_file_path+")";
     projectDiv.style.height = Math.floor(project.height/window.innerHeight*100) + "vh"
     projectDiv.style.maxHeight = project.height + "px";
     projectDiv.style.color = "transparent";
-    projectDiv.getElementsByTagName("a")[0].style.color = "transparent"
     projectDiv.style.backgroundColor = "#fff";
     projectDiv.style.zIndex = Math.floor(Math.random() * 900);
   }
@@ -81,7 +82,6 @@ function background(project) {
     projectDiv.style.backgroundImage = "none";
     projectDiv.style.backgroundColor = "#fff";
     projectDiv.style.color = "black";
-    projectDiv.getElementsByTagName("a")[0].style.color = "black";
     projectDiv.style.zIndex = "999";
   }
 }
