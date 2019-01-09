@@ -1,0 +1,82 @@
+/* Home */
+
+* {box-sizing: border-box;}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-size: 0px;
+}
+
+p {font-family: 'Open Sans',sans-serif;}
+
+
+#info-preview {
+  visibility: hidden;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  width:     65vw;
+  max-width: 65vw;
+  border: none;
+  background-color: #fff;
+  color: #000;
+  z-index: 9999;
+  display: flex;
+  align-items: flex-start;
+  transform: translateX(-32.5vw);
+  border: 1px solid #696969;
+  flex-direction: row;
+}
+
+#photo-me {
+  width: 30%;
+}
+
+#about-me {
+  width: 70%;
+  padding: 0 2vw 0 2vw;
+  vertical-align: text-top;
+  color: #000;
+  font-size: 1vmax;
+}
+
+#photo-me img {
+  max-width:  100%;
+  max-height: 100%;
+}
+
+#surprise {
+  visibility: hidden;
+  opacity: 0;
+  color: #000;
+  font-size: 2vh;
+  position: fixed;
+  width: 100vw;
+  height: 70vmin;
+  text-align: center;
+  transition: transform 1s, visibility 0.4s, opacity 0.4s linear;
+}
+
+#surprise img {
+  width: auto;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 700px) {
+  #info-preview {
+    flex-direction: column;
+    max-width: 90vw;
+    width: 90vw;
+    transform: translateX(-45vw);
+  }
+
+  #photo-me {
+    width: 100%;
+  }
+
+  #about-me {
+    width: 100%;
+    font-size: 14px;
+  }
+}

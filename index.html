@@ -2,115 +2,47 @@
 <html>
   <head>
     <title>Samia Husari</title>
-    <link href="assets/css/styles.css" media="all" rel="stylesheet" />
-    <link rel="shortcut icon" href="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="css/landing-styles.css" media="all" rel="stylesheet" />
+    <link href="css/header.css" media="all" rel="stylesheet" />
+    <link href="css/styles.css" media="all" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Tajawal:400,900&amp;subset=arabic" rel="stylesheet">
   </head>
 
 
   <body>
-    <div class="background"></div>
     <div class="header">
       <div class="header-filters">
-        <h1 class="filter web checked">Digital</h1>
-        <h1 class="filter print checked">Print</h1>
         <h1 class="filter info">Info</h1>
+        <h1 class="filter print checked">Print</h1>
+        <h1 class="filter digital checked">Digital</h1>
+        <h1></h1>
       </div>
       <div class="header-logo">
-          <a href="index.html"><img src="assets/img/samia1.svg"/></a>
+          <a href=""><img src="assets/img/samia1.svg"/></a>
       </div>
       <div class="header-title">
-        <h1> Samia Husari </h1>
+        <a href=""><h1>Samia Husari</h1></a>
       </div>
     </div>
 
-    <div class="previews">
-        <a href="a ub.html"><div class="preview print" id="aub">
-          <h3>AUB Campus</h3>
-          <h4> 
-              Yearbook for the American University at Beirut depicting student life through patterns. 2014.
-            </h4>
-        </div></a>
-        <a href="a cc.html"><div class="preview print" id="acc">
-          <h3>ACC 50th</h3>
-          <h4>Rebrand for Arabian Construction Company celebrating their 50 years of excellence. 2017.
-            </h4>
-        </div></a>
-        <a href="b lr.html"><div class="preview web" id="blr">
-            <h3>BLR</h3>
-            <h4>Rebrand for the Bellevue Literary Review uplifting their online presence. 2018.</h4>
-        </div></a>
-        <a href="e xhalt.html"><div class="preview web" id="exhalt">
-            <h3>Building Youth</h3>
-            <h4>Online platform for exalt pairing business owners and disenfranchised youth for employment programs. 2017.
-              </h4>
-        </div></a>
-        <a href="firefly.html"><div class="preview web" id="firefly">
-            <h3>Firefly</h3>
-            <h4>Interactive app for pedestrians wanting to discover their interests effortlessly while roaming the streets of New York City.  2017.
-              </h4>
-        </div></a>
-        <a href="g raphics.html"><div class="preview print" id="graphics">
-            <h3>Graphics</h3>
-            <h4>Magazine tailored to professionals exploring design and its relationship another field using a unique footnoting system. 2013.
-              </h4>
-        </div></a>
-        <a href="k ooz.html"><div class="preview print" id="kooz">
-            <h3>KOOZ</h3>
-            <h4>Product line of clutches for the modern user embodying the Arabian traditions of the bi'jeh. 2014.
-              </h4>
-        </div></a>
-        <a href="m arvelous.html"><div class="preview print" id="marvelous">
-            <h3>Marvelous Moulures</h3>
-            <h4>Artisanal wall ornaments for the Sursock Art Museum celebrating its rebirth after its closure in 2008. 2016.
-              </h4>
-        </div></a>
-        <a href="monkeybars.html"><div div class="preview web" id="monkeybars">
-          <h3>MONKEYBARS</h3>
-          <h4>Comprehensive branded conference promoting all designers to take a break from the digital world to “Unplug & Play.”2017. 
-            </h4>
-        </div></a>
-        <a href="pa rks.html"><div div class="preview web" id="parks">
-            <h3>NYC Parks</h3>
-            <h4>Data visualization representing the daily preservation of parks in New York City. 2017.
-                </h4>
-        </div></a>
-        <a href="mark.html"><div div class="preview web" id="mark">
-            <h3>Mark</h3>
-            <h4>Strategic app for cautious clients wanting a tattoo based on their intuitive preferences. 2018.</h4>
-        </div></a>
-        <a href="scre en.html"><div div class="preview web" id="screen">
-            <h3>Screen</h3>
-            <h4>Platform for designers showcasing works around the theme of the interactive prototyping process. 2018.
-              </h4>
-        </div></a>
-        <a href="shedd ing.html"><div class="preview print" id="shedding">
-            <h3>Shedding Layers</h3>
-            <h4>Exhibition for Dubai Art Fair showcasing a line of 13 hand crafted wallpapers. 2016.</h4>
-        </div></a>
-    </div>
-    
     <div class="preview info" id="info-preview">
-      <div class="photo-me"><img src="assets/img/me.jpg"/></div>
-      <div class="about-me"> 
+      <div id="photo-me"><img src="assets/img/me.jpg"/></div>
+      <div id="about-me">
         <p> I'm a multifunctional designer interested in the balance between purposefulness and aesthetics when it comes to my work. I lived the first half of my life in the States, and the other half as a native in Lebanon. Having resided in such contrasting areas aided me in attaining two distinct methods of approaching design, which ultimately is an advantage I aim to make the most of. </p>
         <p> I recently graduated as an honors student from Parsons School of Design, with a Masters in Communication Design. I kept my extensive knowledge of print in mind during my graduate career and aimed to achieve the same level of expertise for web design. Prior to attending school in New York, I obtained a Bachelors in Graphic Design from the America University of Beirut. Wherever I live, I'm able to adjust being in a new environment and let my unfamiliar surroundings inspire my creativity;  but my home and roots are always kept in my mind and most importantly- my heart. </p>
-      </div> 
+      </div>
     </div>
 
-    <div class="surprise">
+    <div class="previews" id="previews"></div>
+
+    <div id="surprise">
       <img src="assets/img/Projects-B.gif"/>
       <p>I doodle on the side.</p>
     </div>
     </div>
 
- 
-  
-
-    <script src="assets/js/app.js"></script>
-
+    <script src="js/projects.js"></script>
+    <script src="js/project-previews.js"></script>
   </body>
 </html>
