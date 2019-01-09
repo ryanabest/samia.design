@@ -1,5 +1,5 @@
-// let filePath = "/"
-let filePath = "/samia.design/"
+let filePath = "/"
+// let filePath = "/samia.design/"
 
 let mouseDown = 1;
 document.body.onmousedown = function() {
@@ -69,7 +69,6 @@ function background(project) {
   })
 
   function setBackground() {
-    console.log(projectDiv);
     projectDiv.style.backgroundImage = "url("+project.preview_file_path+")";
     projectDiv.style.height = Math.floor(project.height/window.innerHeight*100) + "vh"
     projectDiv.style.maxHeight = project.height + "px";
