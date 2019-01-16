@@ -10,7 +10,7 @@ document.body.onmouseup = function() {
 }
 
 var projects = [
-   {"project_name":"blr","project_type":"digital","preview_type":"svg","render_height":160,"display_name":"BLR","display_descr":"Rebrand for the Bellevue Literary Review uplifting their online presence. 2018."}
+   // {"project_name":"blr","project_type":"digital","preview_type":"svg","render_height":160,"display_name":"BLR","display_descr":"Rebrand for the Bellevue Literary Review uplifting their online presence. 2018."}
   ,{"project_name":"exhalt","project_type":"digital","preview_type":"svg","render_height":200,"display_name":"Building Youth","display_descr":"Online platform for exalt pairing business owners and disenfranchised youth for employment programs. 2017."}
   ,{"project_name":"firefly","project_type":"digital","preview_type":"svg","render_height":144,"display_name":"Firefly","display_descr":"Interactive app for pedestrians wanting to discover their interests effortlessly while roaming the streets of New York City.  2017."}
   ,{"project_name":"mark","project_type":"digital","preview_type":"svg","render_height":248,"display_name":"Mark","display_descr":"Strategic app for cautious clients wanting a tattoo based on their intuitive preferences. 2018."}
