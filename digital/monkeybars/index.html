@@ -12,11 +12,14 @@
     #concept-text {
       transform: translate(10vw,-10vh);
     }
+    #type-text {
+      transform: translate(10vw,-20vh);
+    }
     #app-text {
-      transform: translate(20vw, -15vh);
+      transform: translate(40vw,-50vh);
     }
     #website-text {
-      transform: translate(5vw,-40vh);
+      transform: translate(5vw,-20vh);
     }
     </style>
   </head>
@@ -37,7 +40,8 @@
     <div class="row" id="title">
       <img id="title-img" src="assets/img/logo.svg"/>
     </div>
-    <div class="row" id="em-concept">
+
+    <div class="row">
       <div class="text" id="concept-text">
         <h2>Concept</h2>
         <p>
@@ -48,9 +52,9 @@
       </div>
     </div>
 
-    <div class="row" id="subheader">
+    <div class="row" id="letters-img">
       <div class="column cright">
-        <img class="subheader-img" id="letters-img" src="assets/img/letters.svg"/>
+        <img class="subheader-img" src="assets/img/letters.svg"/>
       </div>
     </div>
 
@@ -58,20 +62,35 @@
       <img id="merch-img" src="assets/img/merch.png">
     </div>
 
-    <div class="row" id="em-concept">
+    <div class="row">
         <div class="text" id="type-text">
           <h2>Typography</h2>
           <p>
            Representing the conference with a twelve-bar custom font consisting of strong solid lines, and a combination of open and filled forms. The forms represent the jungle bars in a playground while the open-filled type is meant to convey a sense of playfulness. Each letter was custom made to be the signature of the conference. For smaller applications, a six-bar font was made as well.
            </p>
         </div>
-      </div>
-    <div class="column cleft" id="gif">
-      <img id="gif-img" src="assets/img/monkeybars.gif">
     </div>
 
+    <div class="row">
+      <div class="column c1" id="gif">
+        <img src="assets/img/monkeybars.gif">
+      </div>
+      <div class="column c2" id="app">
+        <!-- <div style="padding:166.67% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/310826056?autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script> -->
 
-    <div class="row" id="em-concept">
+        <video autoplay loop>
+          <source src="assets/img/app.mp4" type="video/mp4">
+        </video>
+
+          <!-- <iframe src="https://player.vimeo.com/video/310826056?autoplay=1&loop=1&title=0&byline=0&portrait=0" frameborder="0" </iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script> -->
+      </div>
+
+    <div class="row">
       <div class="text" id="app-text">
         <h2>Mobile Application</h2>
         <p>
@@ -79,15 +98,8 @@
          </p>
       </div>
     </div>
-    <div class="column cright" id="app">
-          <div style="padding:166.67% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/310826056?autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-          <!-- <video autoplay loop>
-            <source src="assets/img/after-app.mp4" type="video/mp4">
-          </video> -->
-          <!-- <div style="padding:166.67% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/310826056?autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script> -->
-        </div>
 
-    <div class="row" id="em-concept">
+    <div class="row">
       <div class="text" id="website-text">
         <h2>Website</h2>
         <p>
@@ -95,11 +107,14 @@
         </p>
       </div>
     </div>
+
     <div class="row" id="website">
       <video autoplay loop>
         <source src="assets/img/Website.mp4" type="video/mp4">
       </video>
     </div>
+
+
 
     <div class="footer">
       <div class="footer-element" id="footer1" onclick="window.location='mailto:samiahusari@gmail.com';">
