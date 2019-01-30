@@ -23,6 +23,7 @@ var projects = [
   ,{"project_name":"kooz","project_type":"print","preview_type":"jpg","render_height":200,"display_name":"KOOZ","display_descr":"Product line of clutches for the modern user embodying the Arabian traditions of the bi'jeh. 2014."}
   ,{"project_name":"marvelous","project_type":"print","preview_type":"jpg","render_height":200,"display_name":"Marvelous Moulures","display_descr":"Artisanal wall ornaments for the Sursock Art Museum celebrating its rebirth after its closure in 2008. 2016."}
   ,{"project_name":"shedding","project_type":"print","preview_type":"jpg","render_height":160,"display_name":"Shedding Layers","display_descr":"Exhibition for Dubai Art Fair showcasing a line of 13 hand crafted wallpapers. 2016."}
+  ,{"project_name":"festival","project_type":"print","preview_type":"svg","render_height":160,"display_name":"Parsons Festival","display_descr":"Annual brand uplift for Parsons Festival showcasing a new theme. 2018, 2019."}
 ]
 
 function projectObj(project_name,project_type,preview_type,render_height,display_name,display_descr) {
