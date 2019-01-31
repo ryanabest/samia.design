@@ -22,7 +22,7 @@
 .preview {
   width: 200px;
   position: absolute;
-  border: 1px solid #696969;
+  border: 2px solid #000000;
   background: no-repeat;
   background-position: center center;
   background-size: cover;
