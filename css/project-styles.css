@@ -97,12 +97,9 @@ body {
 #gif {
   vertical-align: top;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   position: absolute;
-  display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 @media screen and (max-width: 700px) {
