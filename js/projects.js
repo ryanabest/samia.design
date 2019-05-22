@@ -1,5 +1,5 @@
-let filePath = "/"
-// let filePath = "/samia.design/"
+// let filePath = "/"
+let filePath = "/samia.design/"
 
 let mouseDown = 1;
 document.body.onmousedown = function() {
